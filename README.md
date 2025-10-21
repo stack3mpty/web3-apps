@@ -4,9 +4,11 @@
 
 使用metamask作为钱包，https://metamask.io/
 
+Sepolia水龙头：https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+
 使用solidity编写智能合约，https://docs.soliditylang.org/en/v0.8.29/
 
-Sepolia水龙头：https://cloud.google.com/application/web3/faucet/ethereum/sepolia
+将solidity合约转换为Java类，我使用的是 web3j-maven-plugin，建议直接参考 https://github.com/LFDT-web3j/web3j-maven-plugin?tab=readme-ov-file
 
 注意：
 开发中用到了java-dotenv读取本地文件中的环境变量，请在根目录下创建.env文件，配置你自己的变量，例如公钥、私钥、地址等等。我采用的
