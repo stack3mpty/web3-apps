@@ -1,6 +1,7 @@
 package com.stack3mpty.web3.common;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import org.web3j.crypto.Credentials;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
 
@@ -10,9 +11,11 @@ import org.web3j.protocol.http.HttpService;
  */
 public class Web3Property {
     private static final Dotenv dotenv = Dotenv.load();
-    public static final String PRIVATE_KEY = dotenv.get("PRIVATE_KEY");
-    public static final String RPC_URL = dotenv.get("RPC_URL");
-    public static final String ADDRESS_1 = dotenv.get("ACCOUNT_1_ADDRESS");
-    public static final String ADDRESS_2 = dotenv.get("ACCOUNT_2_ADDRESS");
-    public static final Web3j web3 = Web3j.build(new HttpService(Web3Property.RPC_URL));
+    public static final String privateKey = dotenv.get("PRIVATE_KEY");
+    public static final String rpcUrl = dotenv.get("RPC_URL");
+    public static final String address1 = dotenv.get("ACCOUNT_1_ADDRESS");
+    public static final String address2 = dotenv.get("ACCOUNT_2_ADDRESS");
+    public static final Web3j web3 = Web3j.build(new HttpService(Web3Property.rpcUrl));
+    public static final Credentials credentials = Credentials.create(Web3Property.privateKey);
+    public static final String contractAddress = dotenv.get("CONTRACT_ADDRESS");
 }

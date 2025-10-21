@@ -2,10 +2,8 @@ package com.stack3mpty.web3.balance;
 
 import com.stack3mpty.web3.common.Web3Property;
 import lombok.extern.slf4j.Slf4j;
-import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameterName;
 import org.web3j.protocol.core.methods.response.EthGetBalance;
-import org.web3j.protocol.http.HttpService;
 import org.web3j.utils.Convert;
 
 import java.io.IOException;
@@ -31,7 +29,7 @@ public class BalanceInquiry {
     }
 
     public static void main(String[] args) {
-        BigDecimal balance = getBalance(Web3Property.ADDRESS_1);
+        BigDecimal balance = getBalance(Web3Property.address1);
         System.out.println(balance);
     }
 }

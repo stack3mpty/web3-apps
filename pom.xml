@@ -48,4 +48,21 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.web3j</groupId>
+                <artifactId>web3j-maven-plugin</artifactId>
+                <version>4.14.0</version>
+                <configuration>
+                    <packageName>com.stack3mpty.web3.generate</packageName>
+                    <nativeJavaType>true</nativeJavaType>
+                    <outputFormat>java,bin</outputFormat>
+                    <soliditySourceFiles/>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
