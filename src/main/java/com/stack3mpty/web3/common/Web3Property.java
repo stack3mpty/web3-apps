@@ -18,4 +18,5 @@ public class Web3Property {
     public static final Web3j web3 = Web3j.build(new HttpService(Web3Property.rpcUrl));
     public static final Credentials credentials = Credentials.create(Web3Property.privateKey);
     public static final String contractAddress = dotenv.get("CONTRACT_ADDRESS");
+    public static final String simpleTokenAddress = dotenv.get("SIMPLE_TOKEN_ADDRESS");
 }
